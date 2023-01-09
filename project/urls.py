@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from final_app.views import index, PostList, PostBorrar, PostDetalle, PostActualizar, PostCrear, UserSignUp, UserLogin, UserLogout, AvatarActualizar,UserActualizar, MensajeCrear, MensajeDetalle, MensajeListar, MensajeBorrar
+from final_app.views import index, PostList, PostBorrar, PostDetalle, PostActualizar, PostCrear, UserSignUp, UserLogin, UserLogout, AvatarActualizar,UserActualizar, MensajeCrear, MensajeDetalle, MensajeListar, MensajeBorrar, AboutView
 from django.contrib.admin.views.decorators import staff_member_required 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -25,6 +25,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('final_app/', index, name="final_app_index"),
+    path('final_app/about/', AboutView.as_view(), name="final_app_about"),
     path('final_app/<int:pk>/detalle/', PostDetalle.as_view(), name="final_app_detalle"),
     path('final_app/listar', PostList.as_view(), name="final_app_listar"),
     path('final_app/crear', PostCrear.as_view(), name="final_app_crear"),
