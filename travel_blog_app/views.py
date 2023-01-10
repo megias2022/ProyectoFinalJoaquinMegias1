@@ -70,7 +70,7 @@ class MensajeListar(LoginRequiredMixin, ListView):
 
 class MensajeCrear(CreateView):
     model = Mensaje
-    success_url = reverse_lazy("travel_blog_appp_mensajes_crear")
+    success_url = reverse_lazy("travel_blog_app_mensajes_crear")
     fields = ['nombre', 'email', 'texto']
 
 class MensajeBorrar(LoginRequiredMixin, DeleteView):

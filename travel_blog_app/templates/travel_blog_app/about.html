@@ -10,7 +10,7 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'final_app/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'travel_blog_app/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_signup' %}">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_mensajes_crear' %}">Contacto</a></li>
                         {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_app_listar' %}">Mi Info</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_listar' %}">Mi Info</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_logout' %}">Salir</a></li>
                         {% else %}
                             <li class="nav-item"><a class="nav-link" href="{% url 'travel_blog_app_login' %}">Ingresar</a></li>
