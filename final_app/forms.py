@@ -7,8 +7,8 @@ class UsuarioForm(UserCreationForm):
     first_name = forms.CharField(max_length=30)
     last_name = forms.CharField(max_length=30)
     email = forms.EmailField()
-    avatar = forms.ImageField()
+    
 
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'avatar']
+        fields = ['username', 'password1', 'password2', 'first_name', 'last_name']
