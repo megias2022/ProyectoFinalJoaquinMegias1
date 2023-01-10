@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from final_app.views import index, PostList, PostBorrar, PostDetalle, PostActualizar, PostCrear, UserSignUp, UserLogin, UserLogout, AvatarActualizar,UserActualizar, MensajeCrear, MensajeDetalle, MensajeListar, MensajeBorrar, AboutView
+from travel_blog_app.views import index, PostList, PostBorrar, PostDetalle, PostActualizar, PostCrear, UserSignUp, UserLogin, UserLogout, AvatarActualizar,UserActualizar, MensajeCrear, MensajeDetalle, MensajeListar, MensajeBorrar, AboutView
 from django.contrib.admin.views.decorators import staff_member_required 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,22 +24,22 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('final_app/', index, name="final_app_index"),
-    path('final_app/about/', AboutView.as_view(), name="final_app_about"),
-    path('final_app/<int:pk>/detalle/', PostDetalle.as_view(), name="final_app_detalle"),
-    path('final_app/listar', PostList.as_view(), name="final_app_listar"),
-    path('final_app/crear', PostCrear.as_view(), name="final_app_crear"),
-    path('final_app/<int:pk>/borrar/', PostBorrar.as_view(), name="final_app_borrar"),
-    path('final_app/<int:pk>/actualizar/', PostActualizar.as_view(), name="final_app_actualizar"),
-    path('final_app/signup/', UserSignUp.as_view(), name ="final_app_signup"),
-    path('final_app/login/', UserLogin.as_view(), name="final_app_login"),
-    path('final_app/logout/', UserLogout.as_view(), name = "final_app_logout"),
-    path('final_app/avatars/<int:pk>/actualizar/', AvatarActualizar.as_view(), name="final_app_avatars_actualizar"),
-    path('final_app/users/<int:pk>/actualizar/', UserActualizar.as_view(), name="final_app_users_actualizar"),    
-    path('final_app/mensajes/crear/', MensajeCrear.as_view(), name="final_app_mensajes_crear"),
-    path('final_app/mensajes/<int:pk>/borrar/', MensajeBorrar.as_view(), name="final_app_mensajes_borrar"),
-    path('final_app/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="final_app_mensajes_detalle"),
-    path('final_app/mensajes/listar/', MensajeListar.as_view(), name="final_app_mensajes_listar"),
+    path('travel_blog_app/', index, name="travel_blog_app_index"),
+    path('travel_blog_app/about/', AboutView.as_view(), name="travel_blog_app_about"),
+    path('travel_blog_app/<int:pk>/detalle/', PostDetalle.as_view(), name="travel_blog_app_detalle"),
+    path('travel_blog_app/listar', PostList.as_view(), name="travel_blog_app_listar"),
+    path('travel_blog_app/crear', PostCrear.as_view(), name="travel_blog_app_crear"),
+    path('travel_blog_app/<int:pk>/borrar/', PostBorrar.as_view(), name="travel_blog_app_borrar"),
+    path('travel_blog_app/<int:pk>/actualizar/', PostActualizar.as_view(), name="travel_blog_app_actualizar"),
+    path('travel_blog_app/signup/', UserSignUp.as_view(), name ="travel_blog_app_signup"),
+    path('travel_blog_app/login/', UserLogin.as_view(), name="travel_blog_app_login"),
+    path('travel_blog_appp/logout/', UserLogout.as_view(), name = "travel_blog_app_logout"),
+    path('travel_blog_app/avatars/<int:pk>/actualizar/', AvatarActualizar.as_view(), name="travel_blog_app_avatars_actualizar"),
+    path('travel_blog_app/users/<int:pk>/actualizar/', UserActualizar.as_view(), name="travel_blog_app_users_actualizar"),    
+    path('travel_blog_app/mensajes/crear/', MensajeCrear.as_view(), name="travel_blog_app_mensajes_crear"),
+    path('travel_blog_app/mensajes/<int:pk>/borrar/', MensajeBorrar.as_view(), name="travel_blog_app_mensajes_borrar"),
+    path('travel_blog_app/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="travel_blog_app_mensajes_detalle"),
+    path('travel_blog_app/mensajes/listar/', MensajeListar.as_view(), name="travel_blog_app_mensajes_listar"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
