@@ -9,6 +9,10 @@ from final_app.forms import UsuarioForm
 from final_app.models import Avatar, Post, Mensaje
 from django.contrib.auth.models import User
 
+
+
+
+
 def index(request):
     posts = Post.objects.order_by('-publicado_el').all()
     return render(request, "final_app/index.html", {"posts": posts})

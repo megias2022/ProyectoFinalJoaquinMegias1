@@ -5,15 +5,3 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
-<script>
-  // Obtenemos el elemento del DOM
-  var element = document.getElementById("miElemento");
-
-  // Definimos la función para cambiar el color de fondo
-  function cambiarColor() {
-    element.style.backgroundColor = "red";
-  }
-
-  // Asignamos la función como manejador de eventos para el clic
-  element.addEventListener("click", cambiarColor);
-</script>

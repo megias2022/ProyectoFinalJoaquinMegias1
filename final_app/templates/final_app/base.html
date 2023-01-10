@@ -27,13 +27,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="{% url 'final_app_index' %}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_about' %}">About</a></li>
+                       
                         
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                        
+                        
+                        
                         
                         <li class="nav-item"><a class="nav-link" href="{% url 'final_app_signup' %}">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_mensajes_crear' %}">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_about' %}">Acerca de...</a></li>
                         {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'final_app_listar' %}">Admin Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'final_app_listar' %}">Mi Info</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'final_app_logout' %}">Salir</a></li>
                         {% else %}
                             <li class="nav-item"><a class="nav-link" href="{% url 'final_app_login' %}">Ingresar</a></li>
@@ -47,7 +51,7 @@
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Bienvenido al Blog de Viajes!</h1>
-                    <p class="lead mb-0">Sube tus fotos aquí.</p>
+                    <p class="lead mb-0">¡Bienvenido al blog de viajes! Aquí podrás encontrar relatos de aventuras alrededor del mundo y compartir tus propias historias con otros usuarios. ¡Regístrate para unirte a nuestra comunidad de viajeros y empezar a planear tus próximas vacaciones!</p>
                 </div>
             </div>
         </header>
