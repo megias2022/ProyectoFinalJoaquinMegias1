@@ -1,5 +1,7 @@
 Proyecto Final - Joaquín Megías - Blog de Playas
 
+LINK YOUTUBE: https://youtu.be/b7Mp4QXHjo4
+
 Sistema para gestionar contenido simple, en éste caso, imágenes de distintas playas del mundo que se pueden ver, actualizar o eliminar mediante un registro/ingreso de usuario... 
 
 Se realizó un CRUD. 
