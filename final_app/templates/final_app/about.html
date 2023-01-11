@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog de Playas</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'final_app/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'final_app_index' %}">
+                    <img src="{{user.avatar.imagen.url}}" height="64">
+                    {% if user.is_authenticated %}
+                    | Hola, {{user.first_name}} |
+                    {% endif %}
+                    BLOG DE PLAYAS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_index' %}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_mensajes_crear' %}">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_about' %}">Acerca de mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'final_app_signup' %}">Registrarse</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'final_app_listar' %}">Panel de Control</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'final_app_logout' %}">Salir</a></li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'final_app_login' %}">Ingresar</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Acerca de mí</h1>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        {% block contenido %}
+        <form style="text-align: justify;" method="post">
+        <div style="padding: 0 40px">
+            <p>"Me presento, mi nombre es Joaquín Megías y tengo el agrado de ser un joven emprendedor con experiencia en distintos campos laborales. Durante los últimos 17 años, trabajé como Disc Jockey, brindando servicios de sonido, iluminación robótica, proyecciones, armado de stages para conocidos lugares de Córdoba, y mapping entre otros... debido a las circunstancias causadas por la pandemia, decidí embarcarme en un nuevo proyecto empresarial.
+
+                Me uní a mi hermano Jeremías y juntos creamos una fábrica de muebles seriados, utilizando tecnología de última generación para optimizar los procesos de producción. Al ver el potencial de la programación en el negocio decidí iniciarme en el mundo de la programación y es por eso que tomé el curso de Python en Coderhouse.
+                
+                Gracias a lo aprendido en este curso, logré aplicar algo en nuestra fábrica, quiero continuar formándome en distintos lenguajes y especializarme para poder optimizar aún más nuestros procesos y mejorar nuestra empresa. Estoy muy emocionado de seguir explorando las posibilidades que ofrece la programación en el mundo empresarial y espero poder compartir mis conocimientos y experiencias con quienes conocí dentro del curso.</p>
+            </div>
+        {% endblock %}
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
