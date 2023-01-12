@@ -37,18 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'travel_blog_app', 
+    'final_app',  
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+MIDDLEWARE = [    
+    'django.middleware.security.SecurityMiddleware',    
+    'django.contrib.sessions.middleware.SessionMiddleware',    
+    'django.middleware.common.CommonMiddleware',    
+    'django.middleware.csrf.CsrfViewMiddleware',    
+    'django.contrib.auth.middleware.AuthenticationMiddleware',    
+    'django.contrib.messages.middleware.MessageMiddleware',    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',]
 
 ROOT_URLCONF = 'project.urls'
 
@@ -124,7 +123,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'travel_blog_app_login'
+LOGIN_URL = 'final_app_login'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "media/"

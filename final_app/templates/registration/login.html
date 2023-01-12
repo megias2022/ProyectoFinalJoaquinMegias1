@@ -1,0 +1,14 @@
+{% extends 'final_app/base.html' %}
+
+{% block contenido %}
+<form method="post">
+    <div style="padding: 0 40px">
+    <h4>Login</h4>
+    
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Ingresar">
+        </form>
+    {% endblock %}
+
